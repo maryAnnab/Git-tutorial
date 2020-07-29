@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<title>JavaScript - Check/Uncheck all CheckBoxes on Button Click</title>
+		
+	</head>
+<body style="text-align: left;">
+	<h1>Check/Uncheck all CheckBoxes on Button Click.</h1>
+	<big>Select your favourite accessories: </big><br>
+	<input type="checkbox" name="acs" value="Mobile">Mobile<br>
+	<input type="checkbox" name="acs" value="Tab">Tab<br>
+	<input type="checkbox" name="acs" value="Laptop">Laptop<br>
+	<input type="checkbox" name="acs" value="IPod">IPod<br>
+	<p>
+		<input type="button" onclick='selectAll()' value="Check All"/>
+		<input type="button" onclick='UnSelectAll()' value="UnCheck All"/>
+	</p>
+</body>
+<script type="text/javascript">
+  function selectAll(){
+    let items=document.getElementsByName('acs');
+    for(let i=0; i<items.length; i++){
+      if(items[i].type=='checkbox')
+        items[i].checked=true;
+    }
+  }
+  
+  function UnSelectAll(){
+    let items=document.getElementsByName('acs');
+    for(let i=0; i<items.length; i++){
+      if(items[i].type=='checkbox')
+        items[i].checked=false;
+    }
+  }			
+</script>
+
+</html>

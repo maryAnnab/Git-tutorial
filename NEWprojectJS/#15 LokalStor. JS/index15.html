@@ -99,9 +99,16 @@ h2 {
   <div class="wrapper">
     <h2>LOCAL TAPAS</h2>
     <p></p>
-    <ul class="plates">
+    <form name="test">
+    <ul class="plates" >
       <li>Loading Tapas...</li>
     </ul>
+  </form>
+
+  <a href="javascript:checkall('test','v1',true)">Check All</a><br />
+    <a href="javascript:checkall('test','v1',false)">Uncheck All</a>
+
+
     <form class="add-items">
       <input type="text" name="item" placeholder="Item Name" required>
       <input type="submit" value="+ Add Item">
@@ -131,7 +138,7 @@ h2 {
     platesList.innerHTML = plates.map((plate, i) => {
       return `
         <li>
-          <input type="checkbox" data-index=${i} id="item${i}" ${plate.done ? 'checked' : ''} />
+          <input type="checkbox" name="v1" data-index=${i} id="item${i}" ${plate.done ? 'checked' : ''} />
           <label for="item${i}">${plate.text}</label>
         </li>
       `;
@@ -152,6 +159,11 @@ h2 {
 
   populateList(items, itemsList);
 
+  function checkall(formname,checkname,thestate){
+      var el_collection=eval("document.forms."+formname+"."+checkname)
+      for (c=0;c<el_collection.length;c++)
+      el_collection[c].checked=thestate
+      }
 
 
 </script>

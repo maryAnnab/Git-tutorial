@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LocalStorage</title>
+  <link rel="stylesheet" href="style.css">
+</head></head>
+    <body>
+
+    <form name="test">
+    <input type="checkbox" name="v1"> Peter<br />
+    <input type="checkbox" name="v1"> Jane<br />
+    <input type="checkbox" name="v1"> George<br />
+    <input type="checkbox" name="v1"> Ednalan<br />
+    </form>
+    <a href="javascript:checkall('test','v1',true)">Check All</a><br />
+    <a href="javascript:checkall('test','v1',false)">Uncheck All</a>
+    </body>
+
+    <script>
+      function checkall(formname,checkname,thestate){
+      var el_collection=eval("document.forms."+formname+"."+checkname)
+      for (c=0;c<el_collection.length;c++)
+      el_collection[c].checked=thestate
+      }
+     </script>
+
+
+
+    
+</html>

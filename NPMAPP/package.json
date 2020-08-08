@@ -1,0 +1,15 @@
+{
+  "name": "NPMAPP",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Anna",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "lodash": "^4.17.19"
+  }
+}

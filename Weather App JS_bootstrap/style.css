@@ -8,6 +8,17 @@ body {
 	color: white;
 }
 
+.navbar {
+  background-color: rgb(69, 106, 171);
+  color: white;
+  font-size: 35px;
+}
+
+p {
+  color: white;
+  margin-left: 30px;
+}
+
 .hero {
   position: absolute;
   min-height: 100vh;
@@ -16,3 +27,5 @@ body {
   bottom: 0;
   background-color: rgba(31, 34, 118, 0.5);
 }
+
+
